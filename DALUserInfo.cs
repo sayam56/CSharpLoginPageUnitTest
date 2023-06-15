@@ -1,11 +1,18 @@
-﻿using System;
+﻿/* ************************************************************
+ * For students to work on assignments and project.
+ * Permission required material. Contact: xyuan@uwindsor.ca 
+ * ************************************************************/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Data;
 
-namespace LoginPageUnitTest
+namespace BookStoreLIB
 {
-    internal class DALUserInfo
+    class DALUserInfo
     {
         public int LogIn(string userName, string password)
         {
@@ -16,13 +23,10 @@ namespace LoginPageUnitTest
                 cmd.Connection = conn;
                 cmd.CommandText = "Select UserID from UserData where "
                     + " UserName = @UserName and Password = @Password ";
-
                 cmd.Parameters.AddWithValue("@UserName", userName);
                 cmd.Parameters.AddWithValue("@Password", password);
-
                 conn.Open();
                 int userId;
-
 
                 if (cmd.ExecuteScalar() == null)
                 {
@@ -30,7 +34,6 @@ namespace LoginPageUnitTest
                 }
                 else
                     userId = (int)cmd.ExecuteScalar();
-
                 if (userId > 0) return userId;
                 else return -1;
             }

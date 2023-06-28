@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace LoginPageUnitTest
+namespace BookStoreLIB
 {
     [TestClass]
     public class UnitTest1

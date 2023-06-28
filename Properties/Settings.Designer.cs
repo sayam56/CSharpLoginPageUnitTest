@@ -22,17 +22,5 @@ namespace BookStoreLIB.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"F:\\UwindSor\\First Semester\\A" +
-            "dv Software Engineering 8110\\Assignments\\03\\Files4Assign3\\xyBookstoreDB.mdf\";Int" +
-            "egrated Security=True;Connect Timeout=30")]
-        public string aiConnectionString {
-            get {
-                return ((string)(this["aiConnectionString"]));
-            }
-        }
     }
 }

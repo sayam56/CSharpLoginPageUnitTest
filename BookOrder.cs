@@ -71,5 +71,15 @@ namespace BookStoreLIB
             DALOrder dbOrder = new DALOrder();
             return dbOrder.Proceed2Order(xmlOrder);
         }
+
+        public int ItemNumbers()
+        {
+            int itemCount = 0;
+            foreach (var item in orderItemList)
+            {
+                itemCount += item.Quantity;
+            }
+            return itemCount;
+        }
     }
 }
